@@ -1,0 +1,3 @@
+pnpm -r run build:types
+pnpm -r run lint
+pnpm -r run format
