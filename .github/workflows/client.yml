@@ -30,7 +30,7 @@ jobs:
         run: pnpm install
 
       - name: Build project
-        run: pnpm run build --filter @chatrealm/client
+        run: pnpm --filter @chatrealm/client run build
 
       - name: Upload dist files
         uses: actions/upload-artifact@v4
