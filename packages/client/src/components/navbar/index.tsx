@@ -1,3 +1,4 @@
+import GithubIcon from "~icons/mdi/github";
 import { Component } from "solid-js";
 
 import ThemeDropdown from "../theme-dropdown";
@@ -13,7 +14,14 @@ const Navbar: Component<{ handleHomeClick: () => void }> = (properties) => {
           chatrealm.live
         </button>
       </div>
-      <div class="flex-none">
+      <div class="flex-none gap-2">
+        <a
+          class="btn btn-xs btn-circle btn-ghost"
+          href="https://github.com/devak997/chatrealm"
+          target="blank"
+        >
+          <GithubIcon class="w-5 h-5" />
+        </a>
         <ThemeDropdown />
       </div>
     </nav>
