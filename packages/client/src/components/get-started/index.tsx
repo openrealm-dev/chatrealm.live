@@ -42,7 +42,8 @@ const GetStarted: Component<{
           chatrealm.live
         </h1>
         <p class="font-medium">
-          Where Anonymity Meets Positivity - Chat Freely, Connect Authentically!
+          Connect Openly, Chat Freely - An <strong>Open-Source</strong> Space
+          for Real Connections!
         </p>
       </div>
       <div class="bg-base-300 rounded-xl p-2.5 md:p-4 mb-4">
