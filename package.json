@@ -1,0 +1,32 @@
+{
+  "name": "chatrealm.live",
+  "version": "1.0.0",
+  "description": "A real-time anonymous chat application that allows users to connect securely without sign-ups or personal details. Features include text and video chat, interest-based matching, and a user-friendly interface.",
+  "private": true,
+  "scripts": {
+    "format": "pnpm run -r format",
+    "lint": "pnpm run -r lint",
+    "build": "pnpm run -r build",
+    "start": "pnpm run -r start",
+    "dev": "pnpm run -r dev",
+    "prepare": "husky"
+  },
+  "keywords": [
+    "chat",
+    "real-time",
+    "anonymous",
+    "secure",
+    "video",
+    "text",
+    "webrtc"
+  ],
+  "author": "Deva Kumar Kilim",
+  "license": "ISC",
+  "packageManager": "pnpm@9.12.3",
+  "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@commitlint/prompt-cli": "^19.5.0",
+    "husky": "^9.1.6"
+  }
+}

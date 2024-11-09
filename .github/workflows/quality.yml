@@ -1,0 +1,48 @@
+name: Code Quality checks
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: Quality checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Check for TypeScript errors
+        run: pnpm run -r build:types
+
+      - name: Check for ESLint errors
+        run: pnpm run -r lint:check
+
+      - name: Check formatting with Prettier
+        run: pnpm run -r format:check
+
+      - name: Validate current commit (last commit) with commitlint
+        if: github.event_name == 'push'
+        run: pnpx commitlint --last --verbose
+
+      - name: Validate PR commits with commitlint
+        if: github.event_name == 'pull_request'
+        run: pnpx commitlint --from ${{ github.event.pull_request.head.sha }}~${{ github.event.pull_request.commits }} --to ${{ github.event.pull_request.head.sha }} --verbose

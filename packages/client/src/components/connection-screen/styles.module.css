@@ -1,0 +1,64 @@
+.main {
+  background: url(/blob-scatter-haikei.svg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  margin: 10px 0;
+  width: 50px;
+  aspect-ratio: 1;
+  color: #398eb6;
+  background: currentColor;
+  border-radius: 50%;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.loader:before {
+  content: "";
+  position: absolute;
+  background:
+    radial-gradient(farthest-side at bottom right, #0000 94%, currentColor 96%)
+      0 0,
+    radial-gradient(farthest-side at bottom left, #0000 94%, currentColor 96%)
+      100% 0,
+    radial-gradient(farthest-side at top left, #0000 94%, currentColor 96%) 100%
+      100%,
+    radial-gradient(farthest-side at top right, #0000 94%, currentColor 96%) 0
+      100%;
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  animation:
+    l39-1 1s infinite,
+    l39-2 1s infinite;
+}
+
+@keyframes l39-1 {
+  0%,
+  10%,
+  90%,
+  100% {
+    inset: 0;
+  }
+
+  40%,
+  60% {
+    inset: -10px;
+  }
+}
+
+@keyframes l39-2 {
+  0%,
+  40% {
+    transform: rotate(0);
+  }
+
+  60%,
+  100% {
+    transform: rotate(90deg);
+  }
+}
