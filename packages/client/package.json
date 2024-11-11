@@ -41,7 +41,7 @@
     "eslint-plugin-solid": "^0.14.3",
     "eslint-plugin-unicorn": "^56.0.0",
     "globals": "^15.12.0",
-    "postcss": "^8.4.47",
+    "postcss": "^8.4.48",
     "prettier": "3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.8",
     "solid-devtools": "^0.30.1",
@@ -49,7 +49,7 @@
     "typescript": "^5.6.3",
     "typescript-eslint": "^8.13.0",
     "unplugin-icons": "^0.20.1",
-    "vite": "^5.4.10",
+    "vite": "^5.4.11",
     "vite-plugin-solid": "^2.10.2"
   },
   "packageManager": "pnpm@9.12.3"
