@@ -133,8 +133,8 @@ importers:
         specifier: ^15.1.3
         version: 15.1.3
       uuid:
-        specifier: ^11.0.2
-        version: 11.0.2
+        specifier: ^11.0.3
+        version: 11.0.3
       ws:
         specifier: ^8.18.0
         version: 8.18.0
@@ -2808,8 +2808,8 @@ packages:
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
-  uuid@11.0.2:
-    resolution: {integrity: sha512-14FfcOJmqdjbBPdDjFQyk/SdT4NySW4eM0zcG+HqbHP5jzuH56xO3J1DGhgs/cEMCfwYi3HQI1gnTO62iaG+tQ==}
+  uuid@11.0.3:
+    resolution: {integrity: sha512-d0z310fCWv5dJwnX1Y/MncBAqGMKEzlBb1AOf7z9K8ALnd0utBX/msg/fA0+sbyN1ihbMsLhrBlnl1ak7Wa0rg==}
     hasBin: true
 
   v8-compile-cache-lib@3.0.1:
@@ -5636,7 +5636,7 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  uuid@11.0.2: {}
+  uuid@11.0.3: {}
 
   v8-compile-cache-lib@3.0.1: {}
 
