@@ -1,5 +1,5 @@
-import IconSunMoon from "~icons/mdi/theme-light-dark";
 import { Component, For } from "solid-js";
+import IconSunMoon from "~icons/mdi/theme-light-dark";
 
 import { SUPPORTED_THEMS, useTheme } from "../../lib/theme-context";
 

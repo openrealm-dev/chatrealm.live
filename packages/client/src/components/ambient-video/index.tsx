@@ -1,4 +1,3 @@
-import VideoIcon from "~icons/heroicons/video-camera-20-solid";
 import {
   Component,
   ComponentProps,
@@ -8,6 +7,7 @@ import {
   Show,
   splitProps,
 } from "solid-js";
+import VideoIcon from "~icons/heroicons/video-camera-20-solid";
 
 type AmbientVideoProperties = {
   mediaStream?: MediaStream | null;
@@ -34,7 +34,7 @@ const AmbientVideo: Component<
       return;
     }
 
-    const context = canvasReference.getContext("2d");
+    const context = canvasReference!.getContext("2d");
     if (context) {
       context.drawImage(
         videoReference()!,
@@ -44,8 +44,8 @@ const AmbientVideo: Component<
         videoReference()!.videoHeight,
         0,
         0,
-        canvasReference.width,
-        canvasReference.height,
+        canvasReference!.width,
+        canvasReference!.height,
       );
     }
 

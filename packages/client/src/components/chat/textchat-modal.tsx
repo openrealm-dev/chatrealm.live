@@ -1,7 +1,7 @@
+import { Component, createEffect, createSignal, Show } from "solid-js";
 import ChevronUp from "~icons/heroicons/chevron-up";
 import CloseIcon from "~icons/heroicons/x-circle-16-solid";
 import ChatIcon from "~icons/ic/round-chat-bubble";
-import { Component, createEffect, createSignal, Show } from "solid-js";
 
 import { ChatProperties } from "./service";
 import TextChat from "./text-chat";

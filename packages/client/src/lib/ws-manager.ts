@@ -27,15 +27,6 @@ class WSManager extends EventEmitter {
   }
 
   /**
-   * Handles incoming WebSocket messages and emits them based on their type.
-   * @param event - WebSocket message event.
-   */
-  private handleMessage(event: MessageEvent<string>) {
-    const { type, ...data } = JSON.parse(event.data) as S2CMessage;
-    this.emit(type, data);
-  }
-
-  /**
    * Closes the WebSocket connection.
    */
   public destroy() {
@@ -108,6 +99,15 @@ class WSManager extends EventEmitter {
         reject(new Error("WebSocket closed unexpectedly"));
       });
     });
+  }
+
+  /**
+   * Handles incoming WebSocket messages and emits them based on their type.
+   * @param event - WebSocket message event.
+   */
+  private handleMessage(event: MessageEvent<string>) {
+    const { type, ...data } = JSON.parse(event.data) as S2CMessage;
+    this.emit(type, data);
   }
 }
 

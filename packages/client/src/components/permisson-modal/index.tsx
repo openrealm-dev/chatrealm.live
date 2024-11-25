@@ -6,7 +6,7 @@ const PermissionModal: Component<{ error: Error; onClose: () => void }> = (
   let modalReference: HTMLDialogElement;
 
   onMount(() => {
-    modalReference.showModal();
+    modalReference!.showModal();
   });
 
   return (

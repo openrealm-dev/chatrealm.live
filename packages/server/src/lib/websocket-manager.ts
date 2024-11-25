@@ -26,24 +26,6 @@ class WebSocketManager extends EventEmitter {
   }
 
   /**
-   * Handles the timeout event.
-   * @private
-   */
-  private handleTimeout() {
-    this.sendResponse({ type: "timeout" });
-    this.destroy();
-  }
-
-  /**
-   * Sends a response message.
-   * @param {S2CMessage} message - The message to send.
-   * @private
-   */
-  private sendResponse(message: S2CMessage) {
-    this.ws.send(JSON.stringify(message));
-  }
-
-  /**
    * Destroys the WebSocket connection and cleans up resources.
    */
   public destroy() {
@@ -104,6 +86,24 @@ class WebSocketManager extends EventEmitter {
    */
   public sendPeerIceCandidate(candidate: string) {
     this.sendResponse({ candidate, type: "S2CICECANDIDATE" });
+  }
+
+  /**
+   * Handles the timeout event.
+   * @private
+   */
+  private handleTimeout() {
+    this.sendResponse({ type: "timeout" });
+    this.destroy();
+  }
+
+  /**
+   * Sends a response message.
+   * @param {S2CMessage} message - The message to send.
+   * @private
+   */
+  private sendResponse(message: S2CMessage) {
+    this.ws.send(JSON.stringify(message));
   }
 }
 

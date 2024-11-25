@@ -1,6 +1,6 @@
+import { Component, Match, Switch } from "solid-js";
 import RetryIcon from "~icons/material-symbols/refresh";
 import IconPointFilled from "~icons/radix-icons/dot-filled";
-import { Component, Match, Switch } from "solid-js";
 
 import { ConnectionState } from "../../lib/types";
 

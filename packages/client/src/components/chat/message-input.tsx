@@ -1,5 +1,5 @@
-import IconSend from "~icons/ri/send-plane-fill";
 import { Component } from "solid-js";
+import IconSend from "~icons/ri/send-plane-fill";
 
 const MessageInput: Component<{
   disabled: boolean;

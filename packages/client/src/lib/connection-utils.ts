@@ -3,14 +3,14 @@ import RTCManager from "./rtc-manager";
 import { ChatType, S2CAnswerRequest } from "./types";
 import WSManager from "./ws-manager";
 
-export type Payload = {
-  interests: string[];
-  url: string;
-};
-
 export type ConnectionResult = {
   matchedInterests: string[];
   rtcManager: RTCManager;
+};
+
+export type Payload = {
+  interests: string[];
+  url: string;
 };
 
 // Handles an incoming answer request
