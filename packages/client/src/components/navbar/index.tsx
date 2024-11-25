@@ -1,5 +1,5 @@
-import GithubIcon from "~icons/mdi/github";
 import { Component } from "solid-js";
+import GithubIcon from "~icons/mdi/github";
 
 import ThemeDropdown from "../theme-dropdown";
 

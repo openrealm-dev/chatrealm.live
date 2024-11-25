@@ -35,41 +35,6 @@ class RTCManager extends EventEmitter {
   }
 
   /**
-   * Initializes the remote data channel and sets up message handling.
-   */
-  private initializeRemoteChannel(channel: RTCDataChannel) {
-    this.remoteChannel = channel;
-    channel.addEventListener("message", (event) =>
-      this.emit("data-message", event.data),
-    );
-    channel.addEventListener("close", () => this.emit("closed"));
-  }
-
-  /**
-   * Sets up event listeners for PeerConnection and DataChannel.
-   */
-  private setupEventListeners() {
-    this.channel.addEventListener("close", () => this.emit("closed"));
-
-    this.pc.addEventListener("connectionstatechange", () => {
-      if (this.pc.connectionState === "closed") this.emit("closed");
-    });
-
-    this.pc.addEventListener("datachannel", (event) =>
-      this.initializeRemoteChannel(event.channel),
-    );
-
-    this.pc.addEventListener("track", (event_) => {
-      const [stream] = event_.streams;
-      this.peerMediaStream = stream;
-    });
-
-    this.pc.addEventListener("icecandidate", (event) =>
-      this.emit("ICECANDIDATE", event.candidate),
-    );
-  }
-
-  /**
    * Adds an ICE candidate to the peer connection.
    */
   public addIceCandidate(candidate: RTCIceCandidateInit) {
@@ -187,6 +152,41 @@ class RTCManager extends EventEmitter {
         }
       });
     });
+  }
+
+  /**
+   * Initializes the remote data channel and sets up message handling.
+   */
+  private initializeRemoteChannel(channel: RTCDataChannel) {
+    this.remoteChannel = channel;
+    channel.addEventListener("message", (event) =>
+      this.emit("data-message", event.data),
+    );
+    channel.addEventListener("close", () => this.emit("closed"));
+  }
+
+  /**
+   * Sets up event listeners for PeerConnection and DataChannel.
+   */
+  private setupEventListeners() {
+    this.channel.addEventListener("close", () => this.emit("closed"));
+
+    this.pc.addEventListener("connectionstatechange", () => {
+      if (this.pc.connectionState === "closed") this.emit("closed");
+    });
+
+    this.pc.addEventListener("datachannel", (event) =>
+      this.initializeRemoteChannel(event.channel),
+    );
+
+    this.pc.addEventListener("track", (event_) => {
+      const [stream] = event_.streams;
+      this.peerMediaStream = stream;
+    });
+
+    this.pc.addEventListener("icecandidate", (event) =>
+      this.emit("ICECANDIDATE", event.candidate),
+    );
   }
 }
 

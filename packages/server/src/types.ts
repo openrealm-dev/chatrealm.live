@@ -5,6 +5,16 @@ export enum ChatType {
   VIDEO = "video",
 }
 
+export interface C2SAnswerMessage {
+  answer: string;
+  type: "C2SANSWER";
+}
+
+export interface C2SIceCandidateMessage {
+  candidate: string;
+  type: "C2SICECANDIDATE";
+}
+
 export interface C2SInitMessage {
   chatType: ChatType;
   interests: string[];
@@ -12,30 +22,20 @@ export interface C2SInitMessage {
   type: "C2SINIT";
 }
 
-export interface C2SAnswerMessage {
-  answer: string;
-  type: "C2SANSWER";
-}
+export type C2SMessage =
+  | C2SAnswerMessage
+  | C2SIceCandidateMessage
+  | C2SInitMessage;
 
-export interface S2COfferMessage {
+export interface MatchResult {
   matchedInterests: string[];
-  offer: string;
-  type: "S2COFFER";
+  peer: User;
 }
 
 export interface S2CAnswerRequestMessage {
   matchedInterests: string[];
   offer: string;
   type: "S2CANSWERREQUEST";
-}
-
-export interface S2CTimeoutMessage {
-  type: "timeout";
-}
-
-export interface C2SIceCandidateMessage {
-  candidate: string;
-  type: "C2SICECANDIDATE";
 }
 
 export interface S2CIceCandidateMessage {
@@ -49,10 +49,15 @@ export type S2CMessage =
   | S2COfferMessage
   | S2CTimeoutMessage;
 
-export type C2SMessage =
-  | C2SAnswerMessage
-  | C2SIceCandidateMessage
-  | C2SInitMessage;
+export interface S2COfferMessage {
+  matchedInterests: string[];
+  offer: string;
+  type: "S2COFFER";
+}
+
+export interface S2CTimeoutMessage {
+  type: "timeout";
+}
 
 export interface User {
   chatType: ChatType;
@@ -61,9 +66,4 @@ export interface User {
   recentMatches: Set<string>;
   sdp: string;
   ws: WebSocketManager;
-}
-
-export interface MatchResult {
-  matchedInterests: string[];
-  peer: User;
 }

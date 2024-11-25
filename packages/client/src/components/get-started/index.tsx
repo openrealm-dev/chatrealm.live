@@ -1,8 +1,8 @@
+import { Component, For, Show } from "solid-js";
 import VideoIcon from "~icons/heroicons/video-camera-20-solid";
 import ChatIcon from "~icons/ic/round-chat-bubble";
 import IconPlus from "~icons/material-symbols/add-rounded";
 import IconX from "~icons/material-symbols/close-rounded";
-import { Component, For, Show } from "solid-js";
 
 import { ChatType } from "../../lib/types";
 
@@ -15,7 +15,7 @@ const GetStarted: Component<{
 
   const handleSubmit = (event: Event) => {
     event.preventDefault();
-    const value = inputReference.value?.trim().toLowerCase();
+    const value = inputReference!.value?.trim().toLowerCase();
 
     if (
       !value ||
@@ -25,7 +25,7 @@ const GetStarted: Component<{
       return;
     }
 
-    inputReference.value = "";
+    inputReference!.value = "";
     properties.setInterests([...properties.interests, value]);
   };
 

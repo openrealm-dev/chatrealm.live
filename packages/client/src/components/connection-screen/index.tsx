@@ -1,7 +1,7 @@
+import { Component, ComponentProps, JSX, Match, Show, Switch } from "solid-js";
 import RetryIcon from "~icons/heroicons/arrow-path-solid";
 import NoMatchIcon from "~icons/heroicons/chat-bubble-left-ellipsis-20-solid";
 import ErrorIcon from "~icons/heroicons/exclamation-triangle-20-solid";
-import { Component, ComponentProps, JSX, Match, Show, Switch } from "solid-js";
 
 import { ConnectionState } from "../../lib/types";
 import AmbientVideo from "../ambient-video";
