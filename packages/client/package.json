@@ -37,7 +37,7 @@
     "autoprefixer": "^10.4.20",
     "eslint": "^9.15.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-perfectionist": "^4.0.3",
+    "eslint-plugin-perfectionist": "^4.1.2",
     "eslint-plugin-solid": "^0.14.4",
     "eslint-plugin-unicorn": "^56.0.1",
     "globals": "^15.13.0",
