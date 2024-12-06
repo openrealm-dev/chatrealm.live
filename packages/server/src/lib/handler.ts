@@ -33,7 +33,7 @@ export const initializeWebSocketConnection = async (
   );
 
   if (match) {
-    await handleMatch(internalUser, match, payload.sdp);
+    await handleMatch(wsManager, internalUser, match, payload.sdp);
   } else {
     logger.info(`Adding user ${internalUser.id} to state`);
     setupRemoveUserFromState(wsManager, internalUser.id);
@@ -85,6 +85,7 @@ const createUser = (
  * @param {string} sdp - The session description protocol.
  */
 const handleMatch = async (
+  wsManager: WebSocketManager,
   internalUser: User,
   match: MatchResult,
   sdp: string,
@@ -112,6 +113,7 @@ const handleMatch = async (
     logger.info(`Sending answer to ${internalUser.id} from ${match.peer.id}`);
     internalUser.ws.sendPeerAnswer(answer, match.matchedInterests);
   } else {
+    setupRemoveUserFromState(wsManager, internalUser.id);
     addUserToState(internalUser);
   }
 };

@@ -5,6 +5,8 @@ const userIdVsInfo: Map<string, User> = new Map();
 const videoUsers: Map<string, User> = new Map();
 const textUsers: Map<string, User> = new Map();
 
+const userIdVsRemovalInterval: Map<string, NodeJS.Timeout> = new Map();
+
 /**
  * Adds a user to the state.
  * @param {User} user - The user to add.
@@ -12,6 +14,12 @@ const textUsers: Map<string, User> = new Map();
  */
 export const addUserToState = (user: User): Map<string, User> => {
   queueSizeGuage.inc();
+
+  userIdVsRemovalInterval.set(
+    user.id,
+    setTimeout(() => removeUserFromState(user.id), 20_000),
+  );
+
   if (user.chatType === "video") {
     videoUsers.set(user.id, user);
   } else {
@@ -75,6 +83,11 @@ export const removeUserFromState = (id: string): boolean => {
   const user = userIdVsInfo.get(id);
   if (!user) {
     return false;
+  }
+
+  const removalInterval = userIdVsRemovalInterval.get(id);
+  if (removalInterval) {
+    clearInterval(removalInterval);
   }
 
   queueSizeGuage.dec();
