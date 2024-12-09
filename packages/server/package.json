@@ -23,7 +23,7 @@
     "@types/ws": "^8.5.13",
     "eslint": "^9.15.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-perfectionist": "^4.1.2",
+    "eslint-plugin-perfectionist": "^4.2.0",
     "eslint-plugin-unicorn": "^56.0.1",
     "globals": "^15.13.0",
     "nodemon": "^3.1.7",
