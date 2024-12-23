@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
-    "@iconify-json/heroicons": "^1.2.1",
+    "@iconify-json/heroicons": "^1.2.2",
     "@iconify-json/ic": "^1.2.1",
     "@iconify-json/material-symbols": "^1.2.12",
     "@iconify-json/mdi": "^1.2.2",
