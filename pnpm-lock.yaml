@@ -55,8 +55,8 @@ importers:
         specifier: ^1.2.8
         version: 1.2.8
       '@iconify-json/mdi':
-        specifier: ^1.2.1
-        version: 1.2.1
+        specifier: ^1.2.2
+        version: 1.2.2
       '@iconify-json/radix-icons':
         specifier: ^1.2.1
         version: 1.2.1
@@ -568,8 +568,8 @@ packages:
   '@iconify-json/material-symbols@1.2.8':
     resolution: {integrity: sha512-X89QwN5eRMVHEfm5HWMYCZxkUqUPQM2TNv7D8rIPUn2jTzDmgjgiTMomn3DOXWyh1/geHPnTt1bTSFcUXlpGbw==}
 
-  '@iconify-json/mdi@1.2.1':
-    resolution: {integrity: sha512-dSkQU78gsZV6Yxnq78+LuX7jzeFC/5NAmz7O3rh558GimGFcwMVY/OtqRowIzjqJBmMmWZft7wkFV4TrwRXjlg==}
+  '@iconify-json/mdi@1.2.2':
+    resolution: {integrity: sha512-84aznJXzfGdbOXGe8xB7E5uNAb7Yo5IABwTgq2X3kczb819qZeS9eL31bTVn7wJdCLK5ieaoUc2GTS3QYIkJ6g==}
 
   '@iconify-json/radix-icons@1.2.1':
     resolution: {integrity: sha512-glzHFq3Sj9QKUQG7u2dnlC+KPJGpGM1GhyUIrFFWhXqr9CZgkUPnF5n/6YlbCkYGMa+feSwdhwroLTfKvaAaVA==}
@@ -3397,7 +3397,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/mdi@1.2.1':
+  '@iconify-json/mdi@1.2.2':
     dependencies:
       '@iconify/types': 2.0.0
 
