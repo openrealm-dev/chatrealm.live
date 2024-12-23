@@ -39,8 +39,8 @@ importers:
         specifier: ^1.9.3
         version: 1.9.3
       terser:
-        specifier: ^5.36.0
-        version: 5.36.0
+        specifier: ^5.37.0
+        version: 5.37.0
     devDependencies:
       '@eslint/js':
         specifier: ^9.16.0
@@ -98,7 +98,7 @@ importers:
         version: 0.6.9(prettier@3.4.2)
       solid-devtools:
         specifier: ^0.30.1
-        version: 0.30.1(solid-js@1.9.3)(vite@5.4.11(@types/node@22.10.1)(terser@5.36.0))
+        version: 0.30.1(solid-js@1.9.3)(vite@5.4.11(@types/node@22.10.1)(terser@5.37.0))
       tailwindcss:
         specifier: ^3.4.15
         version: 3.4.15(ts-node@10.9.2(@types/node@22.10.1)(typescript@5.7.2))
@@ -113,10 +113,10 @@ importers:
         version: 0.22.0
       vite:
         specifier: ^5.4.11
-        version: 5.4.11(@types/node@22.10.1)(terser@5.36.0)
+        version: 5.4.11(@types/node@22.10.1)(terser@5.37.0)
       vite-plugin-solid:
         specifier: ^2.11.0
-        version: 2.11.0(solid-js@1.9.3)(vite@5.4.11(@types/node@22.10.1)(terser@5.36.0))
+        version: 2.11.0(solid-js@1.9.3)(vite@5.4.11(@types/node@22.10.1)(terser@5.37.0))
 
   packages/server:
     dependencies:
@@ -2689,8 +2689,8 @@ packages:
   tdigest@0.1.2:
     resolution: {integrity: sha512-+G0LLgjjo9BZX2MfdvPfH+MKLCrxlXSYec5DaPYP1fe6Iyhf0/fSmJ0bFiZ1F8BT6cGXl2LpltQptzjXKWEkKA==}
 
-  terser@5.36.0:
-    resolution: {integrity: sha512-IYV9eNMuFAV4THUspIRXkLakHnV6XO7FEdtKjf/mDyrnqUg9LnlOn6/RwRvM9SZjR4GUq8Nk8zj67FzVARr74w==}
+  terser@5.37.0:
+    resolution: {integrity: sha512-B8wRRkmre4ERucLM/uXx4MOV5cbnOlVAqUst+1+iLKPI0dOgFO28f84ptoQt9HEI537PMzfYa/d+GEPKTRXmYA==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -5452,7 +5452,7 @@ snapshots:
       ip-address: 9.0.5
       smart-buffer: 4.2.0
 
-  solid-devtools@0.30.1(solid-js@1.9.3)(vite@5.4.11(@types/node@22.10.1)(terser@5.36.0)):
+  solid-devtools@0.30.1(solid-js@1.9.3)(vite@5.4.11(@types/node@22.10.1)(terser@5.37.0)):
     dependencies:
       '@babel/core': 7.26.0
       '@babel/plugin-syntax-typescript': 7.25.9(@babel/core@7.26.0)
@@ -5461,7 +5461,7 @@ snapshots:
       '@solid-devtools/shared': 0.13.2(solid-js@1.9.3)
       solid-js: 1.9.3
     optionalDependencies:
-      vite: 5.4.11(@types/node@22.10.1)(terser@5.36.0)
+      vite: 5.4.11(@types/node@22.10.1)(terser@5.37.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -5601,7 +5601,7 @@ snapshots:
     dependencies:
       bintrees: 1.0.2
 
-  terser@5.36.0:
+  terser@5.37.0:
     dependencies:
       '@jridgewell/source-map': 0.3.6
       acorn: 8.14.0
@@ -5746,7 +5746,7 @@ snapshots:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
 
-  vite-plugin-solid@2.11.0(solid-js@1.9.3)(vite@5.4.11(@types/node@22.10.1)(terser@5.36.0)):
+  vite-plugin-solid@2.11.0(solid-js@1.9.3)(vite@5.4.11(@types/node@22.10.1)(terser@5.37.0)):
     dependencies:
       '@babel/core': 7.26.0
       '@types/babel__core': 7.20.5
@@ -5754,12 +5754,12 @@ snapshots:
       merge-anything: 5.1.7
       solid-js: 1.9.3
       solid-refresh: 0.6.3(solid-js@1.9.3)
-      vite: 5.4.11(@types/node@22.10.1)(terser@5.36.0)
-      vitefu: 1.0.4(vite@5.4.11(@types/node@22.10.1)(terser@5.36.0))
+      vite: 5.4.11(@types/node@22.10.1)(terser@5.37.0)
+      vitefu: 1.0.4(vite@5.4.11(@types/node@22.10.1)(terser@5.37.0))
     transitivePeerDependencies:
       - supports-color
 
-  vite@5.4.11(@types/node@22.10.1)(terser@5.36.0):
+  vite@5.4.11(@types/node@22.10.1)(terser@5.37.0):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.49
@@ -5767,11 +5767,11 @@ snapshots:
     optionalDependencies:
       '@types/node': 22.10.1
       fsevents: 2.3.3
-      terser: 5.36.0
+      terser: 5.37.0
 
-  vitefu@1.0.4(vite@5.4.11(@types/node@22.10.1)(terser@5.36.0)):
+  vitefu@1.0.4(vite@5.4.11(@types/node@22.10.1)(terser@5.37.0)):
     optionalDependencies:
-      vite: 5.4.11(@types/node@22.10.1)(terser@5.36.0)
+      vite: 5.4.11(@types/node@22.10.1)(terser@5.37.0)
 
   vizion@2.2.1:
     dependencies:
