@@ -40,7 +40,7 @@
     "eslint-plugin-perfectionist": "^4.7.0",
     "eslint-plugin-solid": "^0.14.4",
     "eslint-plugin-unicorn": "^56.0.1",
-    "globals": "^15.13.0",
+    "globals": "^15.15.0",
     "postcss": "^8.4.49",
     "prettier": "3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.9",
